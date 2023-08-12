@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "KCCChassam";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "KCCChassam";
+}
+
+body {
+  background: #f0efe9;
+}
+
+.content {
+  width: 350px;
+  height: 500px;
+  padding: 10%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px #c1c0b9;
+}
+
+.todo_header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.date_area {
+  display: flex;
+}
+
+.left_date {
+  font-size: 40px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.right_date {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.title {
+  color: #29e15b;
+  font-style: italic;
+}
+
+.todo_add {
+  width: 85%;
+  line-height: 1.5;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  color: #333;
+  font-size: 17px;
+}
+
+.todo_add_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #31d49f;
+  border: 1px solid #31d49f;
+  font-size: 40px;
+  color: #fff;
+}
+
+ul {
+  height: 350px;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+li {
+  list-style: none;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #999;
+}
+
+.check_box {
+  cursor: pointer;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #31d49f;
+  border-radius: 4px;
+  background: #31d49f;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+}
+
+.check::after {
+  position: absolute;
+  top: -5px;
+  left: -2.5px;
+  content: "v";
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nocheck {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #31d49f;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+}
+
+span.todo {
+  margin-left: 25px;
+  font-size: 16px;
+  width: 85%;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+span.todo.checked {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.delect_btn {
+  width: 20px;
+  height: 20px;
+  color: #ff8b8b;
+  border: 2px solid #ff8b8b;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+}
+
+.delect_btn span {
+  position: absolute;
+  top: -2px;
+  right: 3px;
+}
+
+.update-form {
+  margin-left: 25px;
+  height: 24px;
+  border: 1px solid #999;
+}
+
+.update-form input {
+  outline-style: none;
+  border: 0;
+  font-size: 16px;
+  height: 24px;
+  padding: 0 10px;
+}
